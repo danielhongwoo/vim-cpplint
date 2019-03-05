@@ -14,6 +14,7 @@ endif
 let b:loaded_cpplint_ftplugin=1
 
 let s:cpplint_cmd="cpplint"
+let s:cpplint_cmd_with_option="cpplint --verbose=4"
 
 if !exists("*Cpplint()")
     function Cpplint()
@@ -36,7 +37,7 @@ if !exists("*Cpplint()")
 
         " perform the grep itself
         let &grepformat="%f:%l: %m"
-        let &grepprg=s:cpplint_cmd
+        let &grepprg=s:cpplint_cmd_with_option
         silent! grep! %
 
         " restore grep settings
