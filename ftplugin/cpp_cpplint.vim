@@ -1,5 +1,5 @@
 "
-" C++ filetype plugin for running cpplint.py
+" C++ filetype plugin for running cpplint
 " Language:     C++ (ft=cpp)
 " Maintainer:   Thomas Chen <funorpain@gmail.com>
 " Version:      Vim 7 (may work with lower Vim versions, but not tested)
@@ -13,7 +13,7 @@ if exists("b:loaded_cpplint_ftplugin")
 endif
 let b:loaded_cpplint_ftplugin=1
 
-let s:cpplint_cmd="cpplint.py"
+let s:cpplint_cmd="cpplint"
 
 if !exists("*Cpplint()")
     function Cpplint()
@@ -59,7 +59,7 @@ if !exists("*Cpplint()")
             " Show OK status
             hi Green ctermfg=green
             echohl Green
-            echon "cpplint.py check OK"
+            echon "cpplint check OK"
             echohl
         endif
     endfunction
